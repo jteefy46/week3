@@ -29,4 +29,10 @@ public partial class EditCar : System.Web.UI.Page
         MySqlCommand cmd = new MySqlCommand(sql_command, con);
         cmd.ExecuteNonQuery();
     }
+
+
+    protected void Edit_Car_Event_Handler(object sender, EventArgs e)
+    {
+
+    }
 }

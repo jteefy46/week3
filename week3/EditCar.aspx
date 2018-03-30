@@ -27,7 +27,7 @@
             <asp:TextBox ID="TextBox_mpg" runat="server"></asp:TextBox>
         </p>
         <p>
-            <asp:Button ID="Edit_Car" runat="server" Text="Edit Car" OnClick ="Edit_Car" Redirect ="Default.aspx "/>
+            <asp:Button ID="Edit_Car" runat="server" Text="Edit Car" OnClick ="Edit_Car_Event_Handler" Redirect ="Default.aspx "/>
         </p>
     </form>
 </body>
