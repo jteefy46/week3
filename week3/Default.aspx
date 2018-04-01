@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <asp:Button ID="Insert_Car" runat="server" Text="Add " OnClick ="GoToEnterCarInfo" />
         
-        <asp:Button ID="Button1" runat="server" Text="Edit " />
+        <asp:Button ID="Button1" runat="server" Text="Edit " OnClick ="GoToEdit" />
         
     </form>
 </body>

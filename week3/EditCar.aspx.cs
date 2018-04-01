@@ -11,8 +11,27 @@ using MySql.Data.MySqlClient;
 
 public partial class EditCar : System.Web.UI.Page
 {
+    private String selected_car_id;
+
+    private String n_make;
+    private String n_model;
+    private String n_price;
+    private String n_mpg;
+    protected string oldLast;
+
     protected void Page_Load(object sender, EventArgs e)
     {
+        if(IsPostBack)
+        {
+            if(Session["before"] != null)
+            {
+                oldLast = ((Car)Session["before"]).Last;
+            }
+        }
+        else
+        {
+            TextBox_make.Text
+        }
 
     }
 
@@ -28,11 +47,11 @@ public partial class EditCar : System.Web.UI.Page
         Response.Write(sql_command + "<br/>");
         MySqlCommand cmd = new MySqlCommand(sql_command, con);
         cmd.ExecuteNonQuery();
+        Response.Redirect("Default.aspx");
+        return;
     }
 
+        
 
-    protected void Edit_Car_Event_Handler(object sender, EventArgs e)
-    {
-
-    }
+    
 }

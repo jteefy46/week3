@@ -43,11 +43,11 @@ public partial class _Default : System.Web.UI.Page
                 String mpg = rdr["mpg"].ToString();
 
                 
-                String entry = "<tr>" + "<td>" + make ;
-                entry += model  + "</td>" + "</tr>";
-                entry += "$"+ price  + "</td>" + "</tr>";
-                entry += mpg + "<br/>" + "</td>" + "</tr>";
-                Response.Write(entry);
+               // String entry = "<tr>" + "<td>" + make ;
+               // entry += model  + "</td>" + "</tr>";
+               // entry += "$"+ price  + "</td>" + "</tr>";
+               // entry += mpg + "<br/>" + "</td>" + "</tr>";
+                //.Write(entry);
             }
             rdr.Close();//do not forget
             Response.Write("</table>");
@@ -67,5 +67,10 @@ public partial class _Default : System.Web.UI.Page
         Response.Redirect("carinfo.aspx");
     }
 
-    
+
+
+    protected void GoToEdit(object sender, EventArgs e)
+    {
+        Response.Redirect("EditCar.aspx");
+    }
 }
